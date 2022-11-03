@@ -10,7 +10,7 @@ PWD=$(pwd)
 source $PWD/source.sh
 
 # Capture password and salt
-passcode="$(security find-generic-password -w -a "${LOGNAME}" -s qar-passcode)"
+passcode=$(get_passcode $1)
 
 read -p "Type or paste OOBI URL: " -r oobi_url
 read -p "Enter an Alias for the AID: " -r alias

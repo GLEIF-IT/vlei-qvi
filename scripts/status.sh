@@ -10,7 +10,7 @@ PWD=$(pwd)
 source $PWD/source.sh
 
 # Capture password
-passcode="$(security find-generic-password -w -a "${LOGNAME}" -s qar-passcode)"
+passcode=$(get_passcode $1)
 
 # Here's your AID:
 kli status --name "${QAR_NAME}" --alias "${QAR_ALIAS}" --passcode "${passcode}"

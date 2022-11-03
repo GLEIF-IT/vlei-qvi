@@ -16,6 +16,17 @@ that is automatically stored in your Mac keychain.
 
 From there you will be ready to join and participate in a Group Multisig AID as described in [Creating Group AID](./docs/creating-group-aid.md).
 
+## Passcode and salt management
+
+In the vLEI Ecosystem your salt (used to create a deterministic public/private key pair) and passcode are as vital as your private keys. 
+KERI has a multi-layer security profile to protect your private keys.
+
+As a result there are multiple options to protect your salt and passcode:
+
+* `--insecure` development only
+* `--kc` utilizes the macOS keychain ([further reading](https://support.apple.com/guide/security/keychain-data-protection-secb0694df1a/web))
+* `--op` utilizes 1Password CLI ([further reading](https://support.1password.com/getting-started-linux/))
+
 ## Further Reading
 The following table contains reference material and repository links for the vLEI schema, the KERI protocol and ACDC
 credentials, all foundational concepts and technologies for GLEIF's vLEI ecosystem:
