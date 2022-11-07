@@ -93,10 +93,10 @@ set_salt() {
         op item create --category password --title "salt" --vault QVI value="$(kli salt)"  >/dev/null 2>&1
       fi
     elif [ "$1" = "--kc" ]; then
-      salt="$(security find-generic-password -w -a "${LOGNAME}" -s ext-gar-salt 2> /dev/null)"
+      salt="$(security find-generic-password -w -a "${LOGNAME}" -s qar-salt 2> /dev/null)"
       if [ -z "${salt}" ]; then
         echo "Generating random salt and storing in Keychain"
-        security add-generic-password -a "${LOGNAME}" -s ext-gar-salt -w "$(kli salt)"
+        security add-generic-password -a "${LOGNAME}" -s qar-salt -w "$(kli salt)"
       fi
     fi
 }
