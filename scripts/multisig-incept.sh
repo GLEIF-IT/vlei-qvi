@@ -10,7 +10,7 @@ PWD=$(pwd)
 source $PWD/source.sh
 
 # Capture password and salt
-passcode="$(security find-generic-password -w -a "${LOGNAME}" -s qar-passcode)"
+passcode=$(get_passcode $1)
 
 read -p "Enter an Alias for the Group Multisig AID: " -r alias
 read -p "Enter the filename of the inception configuration file: " -r filename

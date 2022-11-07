@@ -10,7 +10,7 @@ PWD=$(pwd)
 source $PWD/source.sh
 
 # Capture password and salt
-passcode="$(security find-generic-password -w -a "${LOGNAME}" -s qar-passcode)"
+passcode=$(get_passcode $1)
 
 read -p "Type or paste challenge sent to you: " -r words
 read -p "Enter the Alias who sent you the words: " -r alias
