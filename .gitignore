@@ -1,2 +1,4 @@
 # Intellij specific
 .idea
+passcode
+salt
