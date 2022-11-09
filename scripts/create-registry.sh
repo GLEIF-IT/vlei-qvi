@@ -2,7 +2,7 @@
 
 ##################################################################
 ##                                                              ##
-##              Script for join a multisig aid                  ##
+##             Script for creating registry                     ##
 ##                                                              ##
 ##################################################################
 
@@ -10,6 +10,8 @@ PWD=$(pwd)
 source $PWD/source.sh
 
 # Capture password
-passcode=$(get_passcode $1)
+passcode="$(get_passcode $1)"
 
-kli multisig join --name "${QAR_NAME}" --passcode "${passcode}"
+read -p "Type or paste a nonce: " -r nonce
+
+kli vc registry incept  --name "${QAR_ALIAS}" --passcode "${passcode}"  --alias "${QAR_ALIAS}" --registry-name "${QAR_REG_NAME}" --nonce "${nonce}"

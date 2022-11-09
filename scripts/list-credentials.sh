@@ -2,7 +2,7 @@
 
 ##################################################################
 ##                                                              ##
-##              Script for join a multisig aid                  ##
+##                Script for listing credentials                ##
 ##                                                              ##
 ##################################################################
 
@@ -10,6 +10,7 @@ PWD=$(pwd)
 source $PWD/source.sh
 
 # Capture password
-passcode=$(get_passcode $1)
+passcode="$(get_passcode $1)"
 
-kli multisig join --name "${QAR_NAME}" --passcode "${passcode}"
+# Here's your credentials:
+kli vc list --name "${QAR_NAME}" --alias="${QAR_ALIAS}" --passcode "${passcode}" --poll

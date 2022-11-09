@@ -128,14 +128,14 @@ originator or the challenge.  When you receive a 12-word challenge from another 
 that signed response to the other participant using the following command:
 
 ```bash
-$ ./scripts/response-to-challenge.sh
+$ ./scripts/respond-to-challenge.sh
 ```
 
 This script is similar to the script used to resolve an OOBI earlier.  It will first prompt you to type or paste the 12-word
 challenge and then it will ask for the Alias of the AID who sent you challenge:
 
 ```bash
-./scripts/response-to-challenge.sh
+./scripts/respond-to-challenge.sh
 Type or paste challenge sent to you: rice jewel into dance bean stadium west sister auto cupboard repair daughter
 Enter the Alias who sent you the words: John Doe
 Challenge phrase signed and sent
