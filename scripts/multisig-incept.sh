@@ -9,7 +9,7 @@
 PWD=$(pwd)
 source $PWD/source.sh
 
-# Capture password and salt
+# Capture password
 passcode=$(get_passcode $1)
 
 read -p "Enter an Alias for the Group Multisig AID: " -r alias

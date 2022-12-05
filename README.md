@@ -6,8 +6,7 @@ participate as a QVI Authorized Representative (QAR) as a member of a QVI Autono
 
 ## Repository Layout
 This repository contains documentation in the `./docs` directory and Bash shell scripts in the `./scripts` directory.  The 
-scripts make it easy to use the KERI command line tool `kli` to perform all functions required of a QAR.  It utilizes the KERI
-docker image `gleif/keri:0.6.7` with mounts to local directories to minimize the requirements on the local system.  
+scripts make it easy to use the KERI command line tool `kli` to perform all functions required of a QAR. 
 
 ## Getting Started
 The steps needed to bootstrap your system are described in [Getting Started](./docs/getting-started.md).  After following
@@ -23,9 +22,9 @@ KERI has a multi-layer security profile to protect your private keys.
 
 As a result there are multiple options to protect your salt and passcode:
 
-* `--insecure` development only
+* `--insecure` development only, writes raw secrets to the file system in plain text
 * `--op` utilizes 1Password CLI ([further reading](https://support.1password.com/getting-started-linux/))
-* the default utilizes the macOS keychain ([further reading](https://support.apple.com/guide/security/keychain-data-protection-secb0694df1a/web))
+* `--kc` utilizes the macOS keychain ([further reading](https://support.apple.com/guide/security/keychain-data-protection-secb0694df1a/web))
 
 ## Further Reading
 The following table contains reference material and repository links for the vLEI schema, the KERI protocol and ACDC

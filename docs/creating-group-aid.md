@@ -15,12 +15,12 @@ as described in [Getting Started](getting-started.md) the group multisig AID can
 All members must complete the first 5 steps as described below.  Once that has been completed, one member of the group must
 be selected as the Lead.  The Lead is responsible for running the Group Multisig Shell to generate the configuration file
 for the group multisig AID and initiate the inception with that configuration file.  All other members will join the multisig
-group once they receive the notification from the Lead.  The rest of this document describes the entire process
+group once they receive the notification from the Lead.  The rest of this document describes the entire process.
          
 ## Join Video Call
 The vLEI Ecosystem Governance Framework (vLEI EGF) mandates that all participants in the QVI AIDs must perform NIST-800-63-3 IAL-2 identity
 assurance with all other participants in their group multisig.  In addition, once that is complete the members are required to join
-a live video call with all other participants and present Out-of-band Introducitons (OOBIs) and exchange signed challenge messages in the 
+a live video call with all other participants and present Out-of-band Introductions (OOBIs) and exchange signed challenge messages in the 
 same live session to satisfy the 2-factor identity authentication requirements.  The video sessions can be one-to-one video calls
 between each participant-pair or one video call with all participants in the same session.  It is important during the video call to follow
 the steps defined in the rest of this document to ensure proper compliance with the identity authentication requirements of the vLEI EGF.
@@ -128,14 +128,14 @@ originator or the challenge.  When you receive a 12-word challenge from another 
 that signed response to the other participant using the following command:
 
 ```bash
-$ ./scripts/response-to-challenge.sh
+$ ./scripts/respond-to-challenge.sh
 ```
 
 This script is similar to the script used to resolve an OOBI earlier.  It will first prompt you to type or paste the 12-word
 challenge and then it will ask for the Alias of the AID who sent you challenge:
 
 ```bash
-./scripts/response-to-challenge.sh
+./scripts/respond-to-challenge.sh
 Type or paste challenge sent to you: rice jewel into dance bean stadium west sister auto cupboard repair daughter
 Enter the Alias who sent you the words: John Doe
 Challenge phrase signed and sent
