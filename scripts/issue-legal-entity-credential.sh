@@ -19,7 +19,7 @@ read -p "Enter the alias of the new Legal Entity: " -r recipient
 echo "\"${lei}\"" | jq -f "${QAR_SCRIPT_DIR}/legal-entity-data.jq" > "${QAR_DATA_DIR}/legal-entity-data.json"
 
 # Create EDGES block
-qvi_said=$(kli vc list --name "${QAR_NAME}" --passcode "${passcode}" --alias "${QAR_AID_ALIAS}" --said --schema EBfdlu8R27Fbx-ehrqwImnK-8Cm79sqbAQ4MmvEAYqao  | tr -d '\r')
+qvi_said=$(kli vc list --name "${QAR_NAME}" --passcode "${passcode}" --alias "${QAR_AID_ALIAS}" --said --schema EBfdlu8R27Fbx-ehrqwImnK-8Cm79sqbAQ4MmvEAYqao)
 
 echo "\"${qvi_said}\"" | jq -f "${QAR_SCRIPT_DIR}/legal-entity-edges-filter.jq" > "${QAR_DATA_DIR}/legal-entity-edge-data.json"
 kli saidify --file /data/legal-entity-edge-data.json
