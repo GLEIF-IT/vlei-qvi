@@ -9,7 +9,7 @@
 PWD=$(pwd)
 source $PWD/source.sh
 
-# Capture password and salt
+# Capture password
 passcode=$(get_passcode $1)
 
 read -p "Type or paste challenge sent to you: " -r words

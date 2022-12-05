@@ -12,6 +12,16 @@ source $PWD/source.sh
 # Capture password
 passcode="$(get_passcode $1)"
 
-read -p "Type or paste a nonce: " -r nonce
+echo "Do you need to create nonce?"
+read -p "[y/N] " -r yn
+case $yn in
+  "Y" | "y")
+    kli nonce
+    ;;
+  *)
+    ;;
+esac
+echo ""
+read -p "Enter nonce: " -r nonce
 
-kli vc registry incept  --name "${QAR_ALIAS}" --passcode "${passcode}"  --alias "${QAR_ALIAS}" --registry-name "${QAR_REG_NAME}" --nonce "${nonce}"
+kli vc registry incept  --name "${QAR_NAME}" --passcode "${passcode}"  --alias "${QAR_ALIAS}" --registry-name "${QAR_REG_NAME}" --nonce "${nonce}"

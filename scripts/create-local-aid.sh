@@ -2,7 +2,7 @@
 
 ##################################################################
 ##                                                              ##
-##        Script for creating local External QAR AID            ##
+##        Script for creating local QAR AID                     ##
 ##                                                              ##
 ##################################################################
 
@@ -23,10 +23,10 @@ if [ $ret -eq 0 ]; then
 fi
 
 # Create the local database environment (directories, datastore, keystore)
-kli init --name "${QAR_NAME}" --salt "${salt}" --passcode "${passcode}" --config-dir ./scripts --config-file qar-config.json
+kli init --name "${QAR_NAME}" --salt "${salt}" --passcode "${passcode}" --config-dir ${QAR_SCRIPT_DIR} --config-file qar-config.json
 
 # Create your local AID for use as a participant in the External AID
-kli incept --name "${QAR_NAME}" --alias "${QAR_ALIAS}" --passcode "${passcode}" --file ./scripts/qar-local-incept.json
+kli incept --name "${QAR_NAME}" --alias "${QAR_ALIAS}" --passcode "${passcode}" --file ${QAR_SCRIPT_DIR}/qar-local-incept.json
 
 # Here's your AID:
 kli status --name "${QAR_NAME}" --alias "${QAR_ALIAS}" --passcode "${passcode}"

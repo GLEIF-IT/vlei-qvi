@@ -24,10 +24,10 @@ export QAR_NAME="QAR"
 export QAR_ALIAS="John Doe"
 
 # Change to the name you want for the alias for your group multisig AID
-export EXT_GAR_AID_ALIAS="QVI AID"
+export QAR_AID_ALIAS="QVI AID"
 
 # Change to the name you want for the registry for your QVI
-export QVI_REG_NAME="QVI Registry"
+export QAR_REG_NAME="QVI Registry"
 
 # Set current working directory for all scripts that must access files
 QAR_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
