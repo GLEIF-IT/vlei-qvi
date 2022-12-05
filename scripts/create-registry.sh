@@ -24,4 +24,4 @@ esac
 echo ""
 read -p "Enter nonce: " -r nonce
 
-kli vc registry incept  --name "${QAR_NAME}" --passcode "${passcode}"  --alias "${QAR_ALIAS}" --registry-name "${QAR_REG_NAME}" --nonce "${nonce}"
+kli vc registry incept  --name "${QAR_NAME}" --passcode "${passcode}"  --alias "${QAR_AID_ALIAS}" --registry-name "${QAR_REG_NAME}" --nonce "${nonce}"
