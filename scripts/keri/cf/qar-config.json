@@ -5,7 +5,11 @@
     "http://139.99.193.43:5623/oobi?name=gleif-1",
     "http://20.3.144.86:5623/oobi?name=gleif-2",
     "http://13.245.160.59:5623/oobi?name=gleif-3",
-    "http://47.242.47.124:5623/oobi?name=gleif-4"
+    "http://47.242.47.124:5623/oobi?name=gleif-4",
+    "https://www.gleif.org/.well-known/keri/oobi/EDP1vHcw_wc4M__Fj53-cJaBnZZASd-aMTaSyWEQ-PC2?name=GLEIF%20RoOT",
+    "https://www.gleif.org/.well-known/keri/oobi/EINmHd5g7iV-UldkkkKyBIH052bIyxZNBn9pq-zNrYoS?name=GLEIF%20External",
+    "https://www.gleif.org/.well-known/keri/oobi/EFcrtYzHx11TElxDmEDx355zm7nJhbmdcIluw7UMbUIL?name=GLEIF%20Internal"
+
   ],
   "durls": [
     "https://weboftrust.github.io/oobi/EH6ekLjSr8V32WyFbGe1zXjTzFs9PkTYmupJ9H65O14g",
@@ -14,5 +18,13 @@
     "https://weboftrust.github.io/oobi/ENPXp1vQzRF6JwIuS-mp2U8Uf1MoADoP_GqQ62VsDZWY",
     "https://weboftrust.github.io/oobi/EKA57bKBKxr_kN7iN5i7lMUxpMG-s19dRcmov1iDxz-E",
     "https://weboftrust.github.io/oobi/EBfdlu8R27Fbx-ehrqwImnK-8Cm79sqbAQ4MmvEAYqao"
+  ],
+  "wurls": [
+    "https://gleif-it.github.io/.well-known/keri/oobi/EDP1vHcw_wc4M__Fj53-cJaBnZZASd-aMTaSyWEQ-PC2",
+    "https://weboftrust.github.io/.well-known/keri/oobi/EDP1vHcw_wc4M__Fj53-cJaBnZZASd-aMTaSyWEQ-PC2",
+    "https://gleif-it.github.io/.well-known/keri/oobi/EINmHd5g7iV-UldkkkKyBIH052bIyxZNBn9pq-zNrYoS",
+    "https://weboftrust.github.io/.well-known/keri/oobi/EINmHd5g7iV-UldkkkKyBIH052bIyxZNBn9pq-zNrYoS",
+    "https://gleif-it.github.io/.well-known/keri/oobi/EFcrtYzHx11TElxDmEDx355zm7nJhbmdcIluw7UMbUIL",
+    "https://weboftrust.github.io/.well-known/keri/oobi/EFcrtYzHx11TElxDmEDx355zm7nJhbmdcIluw7UMbUIL"
   ]
 }
