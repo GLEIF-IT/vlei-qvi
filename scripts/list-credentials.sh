@@ -13,4 +13,4 @@ source $PWD/source.sh
 passcode="$(get_passcode $1)"
 
 # Here's your credentials:
-kli vc list --name "${QAR_NAME}" --passcode "${passcode}" --poll
+kli vc list --name "${QAR_NAME}" --passcode "${passcode}" --poll "$@"
