@@ -2,7 +2,7 @@
 
 ##################################################################
 ##                                                              ##
-##                Script for listing credentials                ##
+##          Script for executing random kli commands            ##
 ##                                                              ##
 ##################################################################
 
@@ -12,5 +12,5 @@ source $PWD/source.sh
 # Capture password
 passcode="$(get_passcode $1)"
 
-# Here's your credentials:
-kli vc list --name "${QAR_NAME}" --passcode "${passcode}" --poll "$@"
+# Run the sub command
+kli "$@" --name "${QAR_NAME}" --passcode "${passcode}"
