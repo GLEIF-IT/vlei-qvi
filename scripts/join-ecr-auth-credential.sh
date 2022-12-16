@@ -10,9 +10,9 @@ PWD=$(pwd)
 source $PWD/source.sh
 
 # Capture password
-passcode="$(security find-generic-password -w -a "${LOGNAME}" -s int-gar-passcode)"
+passcode=$(get_passcode $1)
 
 
 read -p "Enter the filename of the new credential: " -r filename
 
-kli vc issue --name "${INT_GAR_NAME}" --passcode "${passcode}" --alias "${INT_GAR_AID_ALIAS}" --credential @"${filename}"
+kli vc issue --name "${QAR_NAME}" --passcode "${passcode}" --alias "${QAR_AID_ALIAS}" --credential @"${filename}"
