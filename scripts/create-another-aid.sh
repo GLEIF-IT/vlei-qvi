@@ -21,8 +21,10 @@ if [ $ret -ne 0 ]; then
    exit 69
 fi
 
+read -p "Enter an Alias for the new AID: " -r alias
+
 # Create another AID, using same DB as the main AID
-kli incept --name "${QAR_NAME}" --alias "${QAR_ALIAS}" --passcode "${passcode}" --file ${QAR_SCRIPT_DIR}/qar-local-incept.json
+kli incept --name "${QAR_NAME}" --alias "${alias}" --passcode "${passcode}" --file ${QAR_SCRIPT_DIR}/qar-local-incept.json
 
 # Here's your AID:
-kli status --name "${QAR_NAME}" --alias "${QAR_ALIAS}" --passcode "${passcode}"
+kli status --name "${QAR_NAME}" --alias "${alias}" --passcode "${passcode}"
