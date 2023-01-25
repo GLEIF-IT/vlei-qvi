@@ -13,4 +13,4 @@ source $PWD/source.sh
 passcode=$(get_passcode $1)
 
 # Here's your AID:
-kli status --name "${QAR_NAME}" --alias "${QAR_ALIAS}" --passcode "${passcode}"
+kli status --name "${QAR_NAME}" --passcode "${passcode}"
