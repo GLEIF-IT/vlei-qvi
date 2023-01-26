@@ -12,16 +12,14 @@ source $PWD/source.sh
 # Capture password
 passcode="$(get_passcode $1)"
 
-read -p "Enter the LEI of the new Legal Entity: " -r lei
-read -p "Enter person legal name: " -r personLegalName
-read -p "Enter official role: " -r officialRole
-read -p "Enter the alias of the recipient of OOR credential: " -r recipient
+read -p "Legal name of person who will hold OOR credential: " -r personLegalName
+read -p "Alias that identifies them in your contacts: " -r recipient
+read -p "Their official role: " -r officialRole
+read -p "LEI of the Legal Entity for this OOR: " -r lei
+read -p "SAID of the OOR AUTH credential: " -r auth_said
 
 # Create DATA block
 echo "[\"${lei}\", \"${personLegalName}\", \"${officialRole}\"]" | jq -f "${QAR_SCRIPT_DIR}/legal-entity-oor-data.jq" > "${QAR_DATA_DIR}/legal-entity-oor-data.json"
-
-# Create EDGES block
-auth_said=$(kli vc list --name "${QAR_NAME}" --passcode "${passcode}" --alias "${QAR_AID_ALIAS}" --said --schema EKA57bKBKxr_kN7iN5i7lMUxpMG-s19dRcmov1iDxz-E)
 
 echo "\"${auth_said}\"" | jq -f "${QAR_SCRIPT_DIR}/legal-entity-oor-edges-filter.jq" > "${QAR_DATA_DIR}/legal-entity-oor-edge-data.json"
 kli saidify --file data/legal-entity-oor-edge-data.json
