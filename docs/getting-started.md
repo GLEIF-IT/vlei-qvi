@@ -9,7 +9,7 @@ perform as a QAR.
 
 ### Prerequisites
 
-The following five software packages are required to execute the scripts in this repository:
+The following two software packages are required to execute the scripts in this repository:
 
 - jq - `sed` for JSON data
 - git - distributed version control system
@@ -31,7 +31,7 @@ export QAR_ALIAS="John Doe"
 ```
 
 Change these values in `source.sh` to the names you want to use for your database directory and local AID alias respectively.
-These values are local to you and not exposed to anyone else so they just need to be values that make sense for you.  We recommend
+These values are local to you and not exposed to anyone else, so they just need to be values that make sense for you.  We recommend
 leaving `QAR_NAME` as it currently is and changing `QAR_ALIAS` to your full name.
 
 

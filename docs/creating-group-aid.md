@@ -94,7 +94,7 @@ participant.
 
 ---
 
-*You should orchestrate in what order each member of the group challenges, while the rest respond. Then the next member challenges, and everyone else responds in turn.*
+*Each participant should generate a unique challenge phrase for each of the other participants*
 
 *There should only be one member of the group running `generate-challenge.sh` at once.*
 
