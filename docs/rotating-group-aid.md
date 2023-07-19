@@ -209,15 +209,12 @@ At this point you must leave this script running as it waits for the other parti
 multisig AID rotation (described in the next section for all other participants).
 
 ```bash
-$ ./scripts/multisig-incept.sh
-Enter an Alias for the Group Multisig AID: QVI AID
-Enter the filename of the inception configuration file: /data/qar-aid-incept.json
-Group identifier inception initialized for EDgkEWEfAnHTNmbHj4oJvOfYyFJC93lJ19WB2GOwFaNI
-Sending multisig event to 6 other participants
-Waiting for other signatures for 0...
-Waiting for delegation approval...
-We are the fully signed witnesser 0, sending to witnesses
-Waiting for fully signed witness receipts for 0
+$ ./scripts/multisig-rotate.sh --smids EKYLUMmNPZeEs77Zvclf0bSN5IN-mLfLpx2ySb-HDlk4 --smids EJccSRTfXYF6wrUVuenAIHzwcx3hJugeiJsEKmndi5q1 --smids ENkjt7khEI5edCMw5qugagbJw1QvGnQEtcewxb0FnU9U --isith '["1/3", "1/3", "1/3"]' 
+Enter the Alias for the Group Multisig AID: QVI AID
+Rotated local member=EJccSRTfXYF6wrUVuenAIHzwcx3hJugeiJsEKmndi5q1, waiting for witness receipts
+Sending local rotation event to 2 other participants
+Sending rotation event to 2 other participants
+Waiting for other signatures...
 
 Alias:  QVI AID
 Identifier: EDgkEWEfAnHTNmbHj4oJvOfYyFJC93lJ19WB2GOwFaNI
@@ -242,14 +239,14 @@ Public Keys:
 
 ```
 
-At this point the QVI Group Multisig AID has been created and you may leave the video call.
+At this point the QVI Group Multisig AID has been rotated and you may leave the video call.
 
 
 ## Join Multisig Group
-If you were not elected to be the Lead for the creation of your QVI Group Multisig AID you will wait until the lead has
-configured the AID and then use the `multisig-join.sh` script to accept the KERI Peer-to-Peer message the lead generated
-and sent you when they created the AID inception event.  Assuming the configuration outlined in the "Configure Group Multisig"
-section above and the member of the group named "Christoph Schneider" was joining the group, the output would look as follows:
+If you are a new member joining the QVI Group Multisig AID you will wait until the existing participants have
+configured the AID rotation and then use the `multisig-join.sh` script to accept the KERI Peer-to-Peer messages generated
+and sent you when they began the rotation of the AID.  Assuming the configuration outlined in the "Configure Group Multisig"
+section above and the member of the group named "multisig3" was joining the group, the output would look as follows:
 
 ```bash
 $ ./scripts/multisig-join.sh
@@ -283,7 +280,7 @@ AID that you will be joining.  It is recommended that the aliases "QVI AID" and 
 the external and internal AIDs respectively.
 
 After you accept the event you should leave this script running as you wait for all other participants to join the group and
-sign the inception event.  Upon completion, your output will update to the following:
+sign the rotation event.  Upon completion, your output will update to the following:
 
 ```bash
 $ ./scripts/multisig-join.sh
